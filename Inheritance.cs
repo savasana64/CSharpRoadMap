@@ -9,6 +9,13 @@
 
             ImagePost imagePost = new ImagePost("Check out my new shoes", "Mahta Ebadi", "www.nike.com", true);
             Console.WriteLine(imagePost.ToString());
+
+            VideoPost videoPost = new VideoPost("Wedding video", "Mahta Ebadi", "www.weddingVideo.com", true, 12);
+            Console.WriteLine(videoPost.ToString());
+
+            videoPost.play();
+            Console.ReadKey();
+            videoPost.stop();
         }
     }
 }
