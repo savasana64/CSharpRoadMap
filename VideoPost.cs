@@ -43,6 +43,7 @@ namespace InheritanceDemo
         {
             if (!playing)
             {
+                playing = true;
                 Console.WriteLine("is playing");
                 timer = new Timer(TimerCallback, null, 0, 1000);
             }
@@ -67,7 +68,8 @@ namespace InheritanceDemo
         public void stop()
         {
             if (playing)
-            { 
+            {
+            playing = false;
             Console.WriteLine("video stopped at {0} seconds", currDuration);
             currDuration = 0;
             timer.Dispose(); //stops the timer
